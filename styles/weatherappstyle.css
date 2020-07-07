@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:ital,wght@0,400;1,400;1,600&display=swap");
+html, body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.weatherApp {
+  background-color: white;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.split.left {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  left: 0;
+  background-color: white;
+}
+
+/* greeting message */
+.intro {
+  margin-left: 50px;
+  margin-top: 200px;
+  width: 700px;
+}
+
+.intro h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  font-size: 4rem;
+  margin-bottom: 0px;
+  font-weight: 400;
+}
+
+.intro h2 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+.intro p {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 1.5rem;
+}
+
+.split.right {
+  right: 0;
+  background-image: url(/images/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* zipcode animation input*/
+.zipcode {
+  width: 50%;
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+}
+
+.zipcode input {
+  width: 100%;
+  height: 100%;
+  color: black;
+  font-size: 1rem;
+  padding-top: 15px;
+  border: none;
+  outline: none;
+}
+
+.zipcode label {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  font-family: "Open Sans", sans-serif;
+  border-bottom: 1px solid black;
+}
+
+.zipcode label::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  bottom: -1px;
+  border-bottom: 1px solid black;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+
+.content-name {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.zipcode input:focus + .label-name .content-name,
+.zipcode input:valid + .label-name .content-name {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  font-size: .75rem;
+  top: 30px;
+  color: black;
+}
+
+.zipcode input:focus + .label-name::after, .zipcode input:valid + .label-name::after {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+/*weather showing*/
+.box {
+  position: relative;
+  width: 550px;
+  height: 500px;
+  margin-left: 100px;
+  top: 100px;
+  background: rgba(255, 255, 255, 0.5);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  border-radius: 58px;
+}
+
+.box h3 {
+  position: absolute;
+  margin-left: 50px;
+  margin-top: 50px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 2.3rem;
+}
+
+.box h4 {
+  position: absolute;
+  font-size: 1rem;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-weight: lighter;
+  margin-left: 50px;
+  margin-top: 105px;
+}
+
+.box h5 {
+  position: absolute;
+  font-size: 6rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bolder;
+  left: 80px;
+  top: 10px;
+}
+
+.degree {
+  font-weight: lighter;
+  font-weight: 50px;
+}
+
+.box h6 {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  left: 300px;
+  bottom: 290px;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.box p {
+  position: absolute;
+  font-family: "Open Sans", sans-serif;
+  font-style: italic;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
+  left: 300px;
+  bottom: 230px;
+}
+/*# sourceMappingURL=weatherappstyle.css.map */

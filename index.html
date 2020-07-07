@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Weather App </title>
+    <link rel="stylesheet" href="/styles/weatherappstyle.css">
+</head>
+<body>
+ <div class="weatherApp">
+     <div class="split left">
+       <div class="intro">
+           <h1>Welcome, </h1>
+           <h2>Find out your forecast by zipcode.<br>
+            Just enter your zipcode
+            at the bottom<br>
+            Simple. Easy. Efficient.</h2>
+            <div class="zipcode">
+
+                <input class="zip" type="text" name="zip" autocomplete="off" required />
+                <label class="label-name"> <span class="content-name">Zipcode</span></label>
+               
+            </div>
+    </div>
+</div>
+<div class="split right">
+    <div class="showWeather">
+        <div class="box">
+            <h3 class="area"> </h3>
+            <h4 class="date"></h4>
+            <h5 class="temp"> </h5>
+            <h6 class="main"></h6>
+            <p class="info"></p>
+            <div class="forecast">
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+                <div class="boxes"></div>
+            </div>
+        </div>
+    </div>
+  </div>  
+</div>
+    <script src="weather.js">
+    </script>
+</body>
+</html>
